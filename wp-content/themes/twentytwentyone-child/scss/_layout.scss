@@ -15,5 +15,34 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   color: $black;
+  background-color: $white;
   overflow-x: hidden;
+}
+
+.hero {
+  background-color: $purple;
+  padding-top: 15rem;
+
+  &-block {
+    max-width: 117.3rem;
+    @include margin-auto;
+    background: linear-gradient(0deg, $grey, $grey), $white;
+    text-align: center;
+    padding-top: 4.1rem;
+    padding-bottom: 3.7rem;
+
+    &__title {
+      font-size: 4rem;
+      letter-spacing: 0.02rem;
+      margin-bottom: 1.3rem;
+      font-family: "Roboto", sans-serif;
+    }
+
+    &__desc {
+      font-size: 2.8rem;
+      line-height: 3.2rem;
+      letter-spacing: 0.014rem;
+      font-family: "Roboto", sans-serif;
+    }
+  }
 }

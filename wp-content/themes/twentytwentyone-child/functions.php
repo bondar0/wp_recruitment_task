@@ -9,6 +9,21 @@ function theme_enqueue_styles() {
     wp_enqueue_style( 'child-main-style', get_stylesheet_directory_uri() . '/css/main.css', array('parent-style'));
 }
 
+if(function_exists('acf_register_block_type')) {
+	add_action('acf/init', 'register_acf_block_types');
+}
+
+function register_acf_block_types() {
+	acf_register_block_type(array(
+		'name' => 'hero',
+		'title' => __('Hero'),
+		'description' => __('Custom Hero Section.'),
+		'render_template' => 'template-parts/blocks/hero/hero.php',
+		'icon' => 'editor-paste-text',
+		'keywords' => array('hero'),
+	));
+}
+
 /**
  * Disable the emoji's
  */

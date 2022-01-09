@@ -46,3 +46,56 @@ body {
     }
   }
 }
+
+.steps {
+  max-width: 117.3rem;
+  padding-top: 7.6rem;
+  padding-bottom: 7.6rem;
+  @include margin-auto;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  display: flex;
+}
+
+.step-item {
+  flex: 0 0 27.2rem;
+  max-width: 27.2rem;
+  text-align: center;
+  margin-bottom: 37.6rem;
+
+  &:nth-child(even) {
+    flex: 0 0 29.3rem;
+    max-width: 29.3rem;
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 0;
+  }
+
+  &:nth-child(2) {
+    margin-left: -4.5%;
+  }
+  &:nth-child(n + 3) {
+    margin-left: -5%;
+  }
+  &__desc {
+    letter-spacing: 0.01rem;
+    margin-bottom: 1rem;
+    line-height: 2.8rem;
+
+    > p {
+      line-height: inherit;
+    }
+
+    strong {
+      color: $red;
+      font-weight: 400;
+    }
+  }
+
+  &__number {
+    font-size: 6rem;
+    line-height: 7.2rem;
+    letter-spacing: 0.03rem;
+  }
+}

@@ -22,6 +22,14 @@ function register_acf_block_types() {
 		'icon' => 'editor-paste-text',
 		'keywords' => array('hero'),
 	));
+    acf_register_block_type(array(
+		'name' => 'steps',
+		'title' => __('Steps'),
+		'description' => __('Custom Steps Section.'),
+		'render_template' => 'template-parts/blocks/steps/steps.php',
+		'icon' => 'editor-paste-text',
+		'keywords' => array('steps'),
+	));
 }
 
 /**

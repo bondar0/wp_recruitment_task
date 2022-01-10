@@ -227,3 +227,87 @@ body {
     }
   }
 }
+
+.workers {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  max-width: 90%;
+  @include margin-auto;
+
+  @include respond-to(md) {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+    max-width: 80%;
+  }
+
+  &__loading {
+    display: none;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    @include respond-to(md) {
+      font-size: 4rem;
+    }
+  }
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+.worker {
+  margin-bottom: 2rem;
+  flex: 0 0 50%;
+  max-width: 50%;
+  @include respond-to(md) {
+    flex: 0 0 33.3334%;
+    max-width: 33.3334%;
+  }
+
+  @include respond-to(xl) {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+
+  &__image {
+    width: 15rem;
+    height: 15rem;
+    overflow: hidden;
+    @include margin-auto;
+
+    @include respond-to(md) {
+      width: 20rem;
+      height: 20rem;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__name {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-top: 0.5rem;
+
+    @include respond-to(md) {
+      font-size: 2.4rem;
+    }
+  }
+}
+
+.button {
+  display: table;
+  @include margin-auto;
+}
